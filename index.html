@@ -6,204 +6,230 @@
   <title>Racal and Rosal Portfolio</title>
   <link rel="stylesheet" href="styles.css">
   <style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+    body {
+      font-family: 'Arial', sans-serif;
+      line-height: 1.6;
+      background: linear-gradient(135deg, #00bcd4, #8e2de2); 
+      color: #fff;
+      height: 100vh;
+      background-attachment: fixed;
+    }
+    
+    header {
+      background-color: rgba(0, 0, 0, 0.7); 
+      color: white;
+      padding: 2rem 0;
+      text-align: center;
+      position: relative;
+    }
 
+    .navbar {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+    }
+    
+    .navbar li {
+      margin: 0 20px;
+    }
 
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  background-color: #f4f4f4;
-  color: #333;
-}
+    .navbar li a {
+      color: white;
+      text-decoration: none;
+      font-size: 1.2rem;
+      padding: 0.5rem 1rem;
+      transition: all 0.3s ease;
+      border-radius: 5px;
+    }
+    
+    .navbar li a:hover {
+      background-color: #ecf0f1;
+      color: #34495e;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
 
+    .hero {
+      padding: 80px 20px;
+      background: linear-gradient(to right, rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('background.jpg');
+      background-size: cover;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+    }
 
-header {
-  background-color: #2c3e50;
-  color: white;
-  padding: 2rem 0;
-  text-align: center;
-  position: relative;
-}
+    .hero h1 {
+      font-size: 4rem;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
 
-.navbar {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
-}
+    .hero p {
+      font-size: 1.8rem;
+      font-weight: 300;
+    }
+    
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+      background: url('https://www.nasa.gov/sites/default/files/thumbnails/11-09-2022-cp-rep-infinito-dark-space.jpg') no-repeat center center;
+      background-size: cover;
+      margin: 40px 0;
+      border-radius: 8px;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+      color: white;
+    }
 
-.navbar li {
-  margin: 0 15px;
-}
+    .section:hover {
+      transform: translateY(-10px); 
+    }
 
-.navbar li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  padding: 0.5rem;
-  transition: all 0.3s ease;
-}
-
-.navbar li a:hover {
-  background-color: #34495e;
-  border-radius: 5px;
-}
-
-
-.hero {
-  padding: 80px 20px;
-  background: linear-gradient(to right, rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)), url('background.jpg');
-  background-size: cover;
-  color: white;
-}
-
-.hero h1 {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-
-.hero p {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-
-.section {
-  padding: 50px 20px;
-  text-align: center;
-  background-color: #fff;
-  margin: 20px 0;
-}
-
-h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #2c3e50;
-}
-
-p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-
-.profile-container {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-  gap: 20px; /* Adds space between the images */
-}
-
-.profile-img {
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid #34495e;
-}
-
-
-
-.projects-container {
-  display: flex;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
-.project {
-  background-color: #ecf0f1;
-  padding: 20px;
-  width: 30%;
-  margin: 10px;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project:hover {
-  transform: scale(1.05);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-.project img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
-
-.project h3 {
-  font-size: 1.5rem;
-  margin-top: 10px;
-  color: #2c3e50;
-}
-
-.project p {
-  font-size: 1rem;
-  color: #7f8c8d;
-}
-
-
-.tech-list {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  list-style: none;
-}
-
-.tech-list li {
-  margin: 10px 15px;
-  font-size: 1.2rem;
-  color: #2c3e50;
-}
-
-
-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 600px;
-  margin: 0 auto;
-}
-
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-button {
-  background-color: #2c3e50;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #34495e;
-}
-
-
-footer {
-  background-color: #34495e;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  position: relative;
-  bottom: 0;
-  width: 100%;
-}
-
-  </style>
+    h2 {
+      font-size: 2.8rem;
+      margin-bottom: 20px;
+      color: #fff;
+    }
+    
+    p {
+      font-size: 1.4rem;
+      margin-bottom: 20px;
+    }
+    
+    #about {
+        background: rgba(255, 255, 255, 0.7);
+      color: #34495e;
+      padding: 50px;
+      border-radius: 8px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+      margin-top: 80px;
+      text-align: center;
+      backdrop-filter: blur(10px);
+    }
+    
+    .profile-container {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 20px;
+      gap: 20px;
+    }
+    
+    .profile-img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #fff;
+      transition: transform 0.3s ease;
+    }
+    
+    .profile-img:hover {
+      transform: scale(1.1); 
+    }
+    
+    .projects-container {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+    
+    .project {
+      background-color: #34495e;
+      padding: 30px;
+      width: 30%;
+      margin: 20px 0;
+      border-radius: 10px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .project:hover {
+      transform: scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    }
+    
+    .project img {
+      width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    
+    .project h3 {
+      font-size: 1.6rem;
+      margin-top: 15px;
+      color: #ecf0f1;
+    }
+    
+    .project p {
+      font-size: 1.1rem;
+      color: #bdc3c7;
+    }
+    
+    .tech-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      list-style: none;
+      margin-top: 20px;
+    }
+    
+    .tech-list li {
+      margin: 10px 20px;
+      font-size: 1.3rem;
+      color: #2c3e50;
+      font-weight: bold;
+    }
+    
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: rgba(44, 62, 80, 0.1);
+      padding: 20px;
+      border-radius: 8px;
+    }
+    
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    
+    button {
+      background-color: #8e2de2;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+    
+    button:hover {
+      background-color: #00bcd4;
+    }
+    
+    footer {
+      background-color: #2c3e50;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+    
+    </style>
 </head>
 <body>
   <header>
@@ -212,6 +238,7 @@ footer {
         <li><a href="#about">About</a></li>
         <li><a href="#projects">Projects</a></li>
         <li><a href="#more-info">More Info</a></li>
+        <li><a href="profile.html">Profile</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
     </nav>
@@ -222,16 +249,11 @@ footer {
   </header>
 
   <section id="about" class="section">
-    <div class="profile-container">
-      <!-- First Profile Image -->
-      <img src="picture12.jpg" alt="Profile Picture" class="profile-img">
-      <!-- Second Profile Image -->
-      <img src="rosal.jpg" alt="Second Profile Picture" class="profile-img">
-    </div>
     <h2>About us!</h2>
-    <p>Hello! we are a passionate Student's developer who loves creating user-friendly, aesthetically pleasing, and responsive websites. My focus is on delivering high-quality work and constantly improving my skills.</p>
+    <div class="about-section">
+      <p>Hello! We are passionate student developers who love creating user-friendly, aesthetically pleasing, and responsive websites. Our focus is on delivering high-quality work and constantly improving our skills.</p>
+    </div>
   </section>
-  
 
   <section id="projects" class="section">
     <h2>Our recently Activities</h2>
@@ -251,24 +273,12 @@ footer {
         <h3>Project 3</h3>
         <p>See my activity2. Click <a href="https://drive.google.com/drive/folders/1WBSsuD-ZRcipqkw4EJV2ROqXirk4sgE_?fbclid=IwY2xjawJFB-VleHRuA2FlbQIxMAABHfsSi7pzpBl1kZbMWMwZ2-6Lq2D2OpEbq06wWxuh6ZMXYyfR6DcmL9Ip2w_aem_oWhtIyQi02K8PpsH8Qkdaw" target="_blank" class="click-link">this</a> to go to Google drive to see.</p>
       </div>
-      <div class="project">
-        <img src="picutre4.png" alt="Project 4">
-        <h3>Activity 4</h3>
-        <p>See my activity4. Click <a href="https://drive.google.com/drive/folders/1HaQUtGWSc52eE5keHNghDP3dUfyAUpvU?fbclid=IwY2xjawJFB-VleHRuA2FlbQIxMAABHfsSi7pzpBl1kZbMWMwZ2-6Lq2D2OpEbq06wWxuh6ZMXYyfR6DcmL9Ip2w_aem_oWhtIyQi02K8PpsH8Qkdaw" target="_blank" class="click-link">this</a> to go to Google drive to see.</p>
-      </div>
-      <div class="project">
-        <img src="picture7.png" alt="Project 5">
-        <h3>Activity 5</h3>
-        <p>See my activity4. Click <a href="https://drive.google.com/drive/folders/1WwxBcAvDnIi-EmPA3hJ91Wu-k4suI2xg?fbclid=IwY2xjawJFB-VleHRuA2FlbQIxMAABHfsSi7pzpBl1kZbMWMwZ2-6Lq2D2OpEbq06wWxuh6ZMXYyfR6DcmL9Ip2w_aem_oWhtIyQi02K8PpsH8Qkdaw" target="_blank" class="click-link">this</a> to go to Google drive to see.</p>
-      </div>
     </div>
   </section>
-  
-  
 
   <section id="more-info" class="section">
     <h2>More Information</h2>
-    <p>Here are some of the technologies I work with:</p>
+    <p>Here are some of the technologies we work with:</p>
     <ul class="tech-list">
       <li>HTML</li>
       <li>CSS</li>
@@ -277,7 +287,7 @@ footer {
       <li>Node.js</li>
       <li>Git</li>
     </ul>
-    <p>Feel free to contact me for collaboration or questions!</p>
+    <p>Feel free to contact us for collaboration or questions!</p>
   </section>
 
   <section id="contact" class="section">
@@ -291,8 +301,8 @@ footer {
   </section>
 
   <footer>
+    <br>
     <p>&copy; 2025 Your Name. All rights reserved.</p>
   </footer>
-
 </body>
 </html>
